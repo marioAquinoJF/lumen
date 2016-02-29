@@ -3,9 +3,8 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePessoasTable extends Migration
+class CreateFofivcaTable extends Migration
 {
-
     /**
      * Run the migrations.
      *
@@ -13,17 +12,12 @@ class CreatePessoasTable extends Migration
      */
     public function up()
     {
-        Schema::create('pessoas', function (Blueprint $table) {
+        Schema::create('fofica', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome');
-            $table->string('apelido');
-            $table->enum('sexo', ['m', 'f']);
-            $table->char('index', 1);
             $table->timestamps();
         });
     }
 
-//['nome', 'apelido', 'sexo'];
     /**
      * Reverse the migrations.
      *
@@ -31,7 +25,6 @@ class CreatePessoasTable extends Migration
      */
     public function down()
     {
-        Schema::drop('pessoas');
+        Schema::drop('fofica');
     }
-
 }

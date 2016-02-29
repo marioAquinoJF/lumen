@@ -1,6 +1,6 @@
 <?php
 
-namespace MHProj\Entities;
+namespace CodeAgenda\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 

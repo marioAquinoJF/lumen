@@ -1,6 +1,6 @@
 <?php
 
-namespace MHProj\Exceptions;
+namespace CodeAgenda\Exceptions;
 
 use Exception;
 use Symfony\Component\HttpKernel\Exception\HttpException;

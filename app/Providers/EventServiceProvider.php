@@ -1,6 +1,6 @@
 <?php
 
-namespace MHProj\Providers;
+namespace CodeAgenda\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 

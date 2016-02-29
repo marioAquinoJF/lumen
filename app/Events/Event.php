@@ -1,6 +1,6 @@
 <?php
 
-namespace MHProj\Events;
+namespace CodeAgenda\Events;
 
 use Illuminate\Queue\SerializesModels;
 
