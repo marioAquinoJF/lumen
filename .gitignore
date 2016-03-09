@@ -1,4 +1,7 @@
 /node_modules
 /vendor
 /nbproject
+bower.json
+gulp.json
+package.json
 .env
