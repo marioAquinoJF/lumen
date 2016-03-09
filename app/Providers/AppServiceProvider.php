@@ -3,21 +3,24 @@
 namespace CodeAgenda\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use CodeAgenda\Entities\Pessoa;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
+
+    public function boot()
+    {
+        return view()->share(['letras' => $this->getIndice()]);
+    }
+
     public function register()
     {
-        $this->app->bind(
-                \CodeAgenda\Repositories\PessoaRepository::class, \CodeAgenda\Repositories\PessoaRepositoryEloquent::class
-        );
-        $this->app->bind(
-                \CodeAgenda\Repositories\TelefoneRepository::class, \CodeAgenda\Repositories\TelefoneRepositoryEloquent::class
-        );
+
     }
+
+    public function getIndice()
+    {
+        return Pessoa::select('index')->distinct()->orderBy('index', 'asc')->get();
+    }
+
 }

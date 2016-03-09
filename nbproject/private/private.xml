@@ -3,6 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="lumen"/>
-        <group name="school"/>
+        <group name="school">
+            <file>file:/C:/xampp/htdocs/lumen/resources/views/pieces/telefones.blade.php</file>
+            <file>file:/C:/xampp/htdocs/lumen/resources/views/pieces/contatos.blade.php</file>
+            <file>file:/C:/xampp/htdocs/lumen/app/Http/routes.php</file>
+            <file>file:/C:/xampp/htdocs/lumen/resources/views/pessoa/edit.blade.php</file>
+            <file>file:/C:/xampp/htdocs/lumen/resources/views/pessoa/create.blade.php</file>
+            <file>file:/C:/xampp/htdocs/lumen/resources/views/telefone/delete.blade.php</file>
+            <file>file:/C:/xampp/htdocs/lumen/app/Http/Controllers/TelefoneController.php</file>
+            <file>file:/C:/xampp/htdocs/lumen/resources/views/telefone/edit.blade.php</file>
+            <file>file:/C:/xampp/htdocs/lumen/resources/views/pessoa/delete.blade.php</file>
+        </group>
     </open-files>
 </project-private>

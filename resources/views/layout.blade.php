@@ -8,7 +8,7 @@
         <title>Code Agenda</title>
 
         <!-- Bootstrap -->
-        <link href="css/app.css" rel="stylesheet">
+        <link href="{{ url('css/app.css')}}" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,7 +27,7 @@
                         <span class="pull-right">
                             <form class="form-inline" action="/search" method="post">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name='search' placeholder='Pesquisar contato' value="{{ $data['search'] }}">
+                                    <input type="text" class="form-control" name='search' placeholder='Pesquisar contato' value="{{ isset($data) ? $data['search'] : ''}}">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                                     </span>
@@ -39,9 +39,15 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    @foreach($data['letras'] as $letra)
+                    @foreach($letras as $letra)
                     <a href="{{ route('agenda.letra', ['letra'=>$letra->index]) }}" class="btn btn-primary btn-xs">{{ $letra->index }}</a>
                     @endforeach
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 btn-row">
+                        <a href="{{route('pessoa.create')}}" class="btn btn-primary">Novo Contato</a>
+
+                    </div>
                 </div>
                 @yield('content')
 

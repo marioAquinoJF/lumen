@@ -15,10 +15,9 @@ class Pessoa extends Model
         return $this->hasMany(Telefone::class);
     }
 
-    //  public function getIndexAttribute()
-    //   {
-    //     return strtoupper(substr(trim($this->apelido),0,1));
-    //  }
-
+    public function emails()
+    {
+        return $this->hasMany(PessoaEmail::class);
+    }
 
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PessoaEmailTableSeeder extends Seeder
+class TelefoneTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class PessoaEmailTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(\CodeAgenda\Entities\PessoaEmail::class,80)->create();
+        
+        factory(\CodeAgenda\Entities\Telefone::class,80)->create();
     }
 }

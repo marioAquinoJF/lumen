@@ -44,7 +44,7 @@ $factory->define(CodeAgenda\Entities\Pessoa::class, function ($faker) {
     return [
         'nome' => $name,
         'apelido' => $name,
-        'sexo' => $faker->randomElement(['m','f']),
+        'sexo' => strtoupper($faker->randomElement(['M','F'])),
         'index'=> convertInIndex(strtoupper(substr(trim($name),0,1))) 
     ];
 });
@@ -57,5 +57,12 @@ $factory->define(CodeAgenda\Entities\Telefone ::class, function ($faker) {
         'prefixo' => $faker->randomNumber(4),
         'sufixo' => $faker->randomNumber(4),
         'pessoa_id' => $faker->numberBetween(1,30)
+    ];
+});
+
+$factory->define(CodeAgenda\Entities\PessoaEmail::class, function ($faker) {
+    return [
+        'email' => $faker->email,
+        'pessoa_id' => rand(1,30),
     ];
 });

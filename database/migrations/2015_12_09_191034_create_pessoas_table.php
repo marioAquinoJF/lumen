@@ -23,7 +23,6 @@ class CreatePessoasTable extends Migration
         });
     }
 
-//['nome', 'apelido', 'sexo'];
     /**
      * Reverse the migrations.
      *

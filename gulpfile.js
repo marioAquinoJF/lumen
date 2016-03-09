@@ -8,10 +8,12 @@ elixir(function(mix){
             .copy(bowerDir+'font-awesome/fonts', 'public/fonts')
             .copy(bowerDir+'bootstrap/dist/js/bootstrap.js', 'resources/assets/js')
             .copy(bowerDir+'jquery/dist/jquery.js', 'resources/assets/js')
+          //  .copy(bowerDir+'jquery/dist/tabs.js', 'resources/assets/js')
             .scripts([
                 'jquery.js',
                 'bootstrap.js',
                 'custom.js',
+                'tabbs.js'
             ], 'public/js/scripts.js')
                     .less('app.less');
 });

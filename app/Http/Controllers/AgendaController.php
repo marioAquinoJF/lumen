@@ -11,8 +11,10 @@ class AgendaController extends Controller
     public function index($letra = 'A')
     {
         $pessoas = Pessoa::where('apelido', 'like', $letra . '%')->get();
-        $data = ['pessoas' => $pessoas, 'letras' => $this->getIndice(), 'search' => ''];
-        return view('agenda', compact('data'));
+        $data = ['pessoas' => $pessoas, 'search' => ''];
+        $email = true;
+        $telefone = true;
+        return view('agenda', compact('data', 'email', 'telefone'));
     }
 
     public function search(Request $request)
@@ -28,20 +30,11 @@ class AgendaController extends Controller
         } else {
             return redirect('/A');
         }
-        $letras = $this->getIndice();
-        $data = ['pessoas' => (count($pessoas) === 0 ? 'Nenhuma pessoa encontrada' : $pessoas), 'letras' => $letras, 'search' => $search];
-        return view('agenda', compact('data'));
-    }
+        $data = ['pessoas' => (count($pessoas) === 0 ? 'Nenhuma pessoa encontrada' : $pessoas), 'search' => $search];
 
-    public function getIndice()
-    {
-        return Pessoa::select('index')->distinct()->orderBy('index', 'asc')->get();
-    }
-
-    public function destroy($id)
-    {
-        Pessoa::find($id)->delete();
-        return redirect('/');
+        $email = true;
+        $telefone = true;
+        return view('agenda', compact('data', 'email', 'telefone'));
     }
 
 }
