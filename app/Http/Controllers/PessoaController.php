@@ -63,7 +63,7 @@ class PessoaController
     public function delete($id)
     {
         $pessoa = Pessoa::find($id);
-        $data = ['pessoa' => $pessoa];
+        $data = ['pessoa' => $pessoa,'telefone'=>false,'email'=>false];
         return view('pessoa.delete', $data);
     }
 
